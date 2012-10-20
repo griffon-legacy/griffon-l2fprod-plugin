@@ -29,7 +29,7 @@ import com.l2fprod.common.propertysheet.*
  * @author Andres Almiray
  */
 class L2fprodGriffonAddon {
-	Map factories = [
+    Map factories = [
         jbannerPanel: BannerPanel,
         jbuttonBar: new JButtonBarFactory(),
         linkButton: new RichActionWidgetFactory(JLinkButton),
@@ -46,5 +46,5 @@ class L2fprodGriffonAddon {
         propertySheetTable: new TableFactory(PropertySheetTable),
         propertySheetTableModel: new PropertySheetTableModelFactory(),
         property: new PropertyFactory()
-	]
+    ]
 }

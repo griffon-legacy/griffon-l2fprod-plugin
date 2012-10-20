@@ -19,11 +19,11 @@
  */
 class L2fprodGriffonPlugin {
     // the plugin version
-    String version = '0.1'
+    String version = '1.0.0'
     // the version or versions of Griffon the plugin is designed for
-    String griffonVersion = '0.9.5 > *'
+    String griffonVersion = '1.0.0 > *'
     // the other plugins this plugin depends on
-    Map dependsOn = [swing: '0.9.5']
+    Map dependsOn = [swing: '1.0.0']
     // resources that are included in plugin packaging
     List pluginIncludes = []
     // the plugin license
@@ -89,36 +89,36 @@ Refer to the Javadocs found in the plugin's distribution to learn more about the
 
 Using `propertySheetPanel` and `property`
 
-		panel {
-			bean(new Person(), id: "person",
-				name: "Joe",
-				lastname: "Cool")
-			propertySheetPanel(person,
-				excludes: ["metaClass"],
-				preferredSize: [320,300]) {
-					property(name: "name", 	shortDescription: "Person's name")
-					property(name: "lastname", shortDescription: "Person's lastname")  
-			}
-		}
-		
+        panel {
+            bean(new Person(), id: "person",
+                name: "Joe",
+                lastname: "Cool")
+            propertySheetPanel(person,
+                excludes: ["metaClass"],
+                preferredSize: [320,300]) {
+                    property(name: "name",  shortDescription: "Person's name")
+                    property(name: "lastname", shortDescription: "Person's lastname")  
+            }
+        }
+        
 Using `jtaskPane` and `jtaskPaneGroup`
 
-		jtaskPane(preferredSize: [320,300]) {
-			jtaskPaneGroup(title: "Group 1", special: true) {
-				label("Action 1")
-				label("Action 2")
-			}
-			jtaskPaneGroup(title: "Group 2", expanded: false) {
-				label("Action 1")
-				label("Action 2")
-				label("Action 3")
-			}
-			jtaskPaneGroup(title: "Group 3") {
-				label("Action 1")
-				label("Action 2")
-				label("Action 3")
-			}
-		}
+        jtaskPane(preferredSize: [320,300]) {
+            jtaskPaneGroup(title: "Group 1", special: true) {
+                label("Action 1")
+                label("Action 2")
+            }
+            jtaskPaneGroup(title: "Group 2", expanded: false) {
+                label("Action 1")
+                label("Action 2")
+                label("Action 3")
+            }
+            jtaskPaneGroup(title: "Group 3") {
+                label("Action 1")
+                label("Action 2")
+                label("Action 3")
+            }
+        }
 
 [1]: http://l2fprod.com/common
 '''
